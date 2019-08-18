@@ -1,0 +1,24 @@
+somaid = 0
+media = 0
+maioridh = 0
+hmaisv = ''
+menordvinte = 0
+for c in range(1, 5):
+    print('-' * 5, f'{c}ª Pessoa', '-' * 5)
+    nome = str(input('Nome: ')).strip().title()
+    idade = int(input('Idade: '))
+    sexo = str(input('Sexo [M/F]: ')).strip()
+    somaid += idade
+    if c == 1 and sexo in 'Mm':
+        maioridh = idade
+        hmaisv = nome
+    if sexo in 'Mm' and idade > maioridh:
+        maioridh = idade
+        hmaisv = nome
+    if sexo in 'Ff' and idade < 20:
+        menordvinte += 1
+
+media = somaid / 4
+print(f'A média de idade destas pessoas é de {media:.2f} anos.')
+print(f'O homem mais velho tem {maioridh} anos e se chama {hmaisv}.')
+print(f'Há {menordvinte} mulheres com menos de 20 anos.')
