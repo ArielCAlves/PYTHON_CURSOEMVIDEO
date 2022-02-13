@@ -1,8 +1,7 @@
 from datetime import date
 data = date.today()
-maior = 0
-menor = 0
-idade = 0
+maior = menor = idade = 0
+
 for c in range(0, 7):
     ano = int(input('Em que ano você nasceu? '))
     idade = data.year - ano
